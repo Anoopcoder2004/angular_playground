@@ -1,0 +1,27 @@
+<div>
+  <h1>{{title}}</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>product no</th>
+        <th> name</th>
+        <th> price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of displayedProducts">
+        <td>{{product.id}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    <button (click)="goToPreviousPage()">prev</button>
+    <div *ngFor="let page of pages">
+      <button (click)="onPageChange(page)">page{{page}}</button>
+    </div>
+    <button (click)="goToNextPage()">next</button>
+  </div>
+</div>
